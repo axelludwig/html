@@ -1,0 +1,24 @@
+video {
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  
+  #videos {
+    color: #ffffff;
+    width: 900px;
+    height: 636px;
+    margin-left: 325px;
+    position: absolute;
+    z-index: 0;
+  }
+  
+  #download {
+    margin-top: 50px;
+    ;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+    color: red;
+  }
+  
