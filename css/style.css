@@ -1,0 +1,36 @@
+video {
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+#videos {
+    color: #ffffff;
+    width: 900px;
+    height: 636px;
+    margin-left: 325px;
+    position: absolute;
+    z-index: 0;
+}
+
+/* 
+#kalis {
+    background-color: #ffffff;
+    width: 900px;
+    height: 636px;
+    margin-left: 325px;
+    position: relative;
+    z-index:1;
+} */
+
+#download {
+    margin-top: 50px;;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+    color: red;
+}
+
+#test {
+    color: red;
+}

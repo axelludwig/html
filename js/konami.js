@@ -2,16 +2,17 @@ let cursor = 0;
 const KONAMI_CODE = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
 document.addEventListener('keydown', (e) => {
   cursor = (e.keyCode == KONAMI_CODE[cursor]) ? cursor + 1 : 0;
-  if (cursor == KONAMI_CODE.length) secret_place();
+  if (cursor == KONAMI_CODE.length) youWon();
 });
 
 function youWon() {
-  var audio = new Audio("ff7.mp3");
-  audio.play();
+  confetti.start();
+  var x = document.getElementById("myAudio");
+  x.volume = 0.15;
+  x.play();
+  setTimeout(secret_place, 5000);
 }
 
 function secret_place() {
-  youWon();
-  alert("");
-  // window.location.href = "/secret_place.html";
+  window.location.href = "/secret_place.html";
 }
