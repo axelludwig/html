@@ -6,11 +6,12 @@ document.addEventListener('keydown', (e) => {
 });
 
 function youWon() {
+  confetti.maxCount = 1000;
   confetti.start();
   var x = document.getElementById("myAudio");
   x.volume = 0.15;
   x.play();
-  setTimeout(secret_place, 5000);
+  setTimeout(secret_place, 4500);
 }
 
 function secret_place() {

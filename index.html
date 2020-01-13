@@ -4,12 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>linkenparis</title>
-  <meta name="author" content="">
-  <meta name="description" content="">
+  <meta name="author" content="axelludwig">
+  <meta name="description" content="mon site perso">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/background.css" rel="stylesheet">
+  <link href="css/comfortaa.css" rel="stylesheet">
 
   <audio id="myAudio">
     <source src="source/ff7.mp3" type="audio/mpeg">
@@ -20,19 +22,21 @@
   </video>
 
 
-
 </head>
 
 <body>
 
   <div class="container_top">
-    <img id="Img" src="source/mute.png" onclick="mute()" style="max-width: 100%" />
+    <img id="mute_image" src="source/mute.png" onclick="mute()" />
+  </div>
+
+  <div class="container_top_pause">
+    <img id="play_image" src="source/play.png" onclick="pause()" />
   </div>
 
   <div class="content">
-    <h1>Heading</h1>
+    <h1>linkenparis.com</h1>
     <p>Lorem ipsum...</p>
-    <button id="myBtn" onclick="myFunction()">Pause</button>
   </div>
 
   <script src="js/script.js"></script>
