@@ -15,6 +15,24 @@
   width: 3%;
 }
 
+.content {
+  text-align: center;
+  position: fixed;
+  top: 8%;
+  background: rgba(255, 255, 255, 0.459);
+  color: #f1f1f1;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  min-width: 230px;
+}
+
+.container_title {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
 #mute_image {
   max-width: 100%;
 }
@@ -23,15 +41,6 @@
   max-width: 100%;
   margin-right: 11px;
   margin-top: 5px;
-}
-
-.content {
-  position: fixed;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 100%;
-  /* padding: 20px; */
 }
 
 #myBtn {
