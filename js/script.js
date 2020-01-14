@@ -5,14 +5,16 @@ var mute_image = document.getElementById("mute_image");
 var play_image = document.getElementById("play_image");
 
 var count_mute = 0;
+var count_play = 1;
 
 function pause() {
-  if (video.paused) {
-    video.play();
-    play_image.src = "source/play.png"
-  } else {
+  count_play++;
+  if (0 == count_play % 2) {
     video.pause();
     play_image.src = "source/pause.png"
+  } else {
+    video.play();
+    play_image.src = "source/play.png"
   }
 }
 
