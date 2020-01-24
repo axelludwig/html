@@ -8,7 +8,7 @@ document.addEventListener('keydown', (e) => {
 function youWon() {
   confetti.maxCount = 1000;
   confetti.start();
-  var x = document.getElementById("myAudio");
+  var x = document.getElementById("victory_sound");
   x.volume = 0.15;
   x.play();
   setTimeout(secret_place, 4500);

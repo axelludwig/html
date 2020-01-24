@@ -1,8 +1,10 @@
 var video = document.getElementById("myVideo");
-video.volume = 0.3;
+var music = document.getElementById("background_music");
+// music.volume = 0.3;
 var btn = document.getElementById("myBtn");
 var mute_image = document.getElementById("mute_image");
 var play_image = document.getElementById("play_image");
+var started = false;
 
 var count_mute = 0;
 var count_play = 1;
@@ -21,10 +23,11 @@ function pause() {
 function mute() {
   count_mute++;
   if (0 == count_mute % 2) {
-    video.muted = true;
+    music.volume = 0;
     mute_image.src = "source/mute.png"
   } else {
-    video.muted = false;
+    if (!started) music.play();
+    music.volume = 1;
     mute_image.src = "source/unmute.png"
   }
 }
