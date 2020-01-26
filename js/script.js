@@ -9,6 +9,14 @@ var started = false;
 var count_mute = 0;
 var count_play = 1;
 
+var date = document.getElementById("date");
+var time = document.getElementById("time");
+
+updateTime();
+window.setInterval(function(){
+  updateTime();
+}, 1000);
+
 function pause() {
   count_play++;
   if (0 == count_play % 2) {
@@ -32,30 +40,30 @@ function mute() {
   }
 }
 
-function success(pos) {
-  var crd = pos.coords;
-
-  console.log('Your current position is:');
-  console.log(`Latitude : ${crd.latitude}`);
-  console.log(`Longitude: ${crd.longitude}`);
-  console.log(`More or less ${crd.accuracy} meters.`);
-}
-
-function error(err) {
-  console.warn(`ERROR(${err.code}): ${err.message}`);
-}
-
-function getLocation() {
-  navigator.geolocation.getCurrentPosition(success, error);
+function updateTime() {
+  var today = new Date();
+  var t = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  var date = new Date();
+  time.innerText = t;
 }
 
 function getWeather() {
-  getLocation();
-  // fetch('https://json.geoiplookup.io/')
-  //   .then((response) => {
-  //     return response.json();
-  //   })
-  //   .then((myJson) => {
-  //     console.log(myJson);
-  //   });
+  fetch('https://json.geoiplookup.io/')
+    .then((response) => {
+      return response.json();
+    })
+    .then((json) => {
+      var longitude = json.longitude;
+      var string = "http://api.openweathermap.org/data/2.5/weather?lat="
+        + json.latitude + "&lon=" + json.longitude
+        + "&APPID=e2ec4be1350ccc0e65512e5b66e5c807";
+      fetch(string)
+        .then((response) => {
+          return response.json();
+        })
+        .then((json) => {
+          console.log(json);
+        });
+    });
 }
+
