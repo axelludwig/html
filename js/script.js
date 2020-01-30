@@ -12,7 +12,17 @@ var count_play = 1;
 var date = document.getElementById("date");
 var time = document.getElementById("time");
 
-updateTime();
+startup();
+
+function startup() {
+  updateTime();
+  ;
+}
+
+function updateDate() {
+
+}
+
 window.setInterval(function(){
   updateTime();
 }, 1000);
@@ -42,8 +52,7 @@ function mute() {
 
 function updateTime() {
   var today = new Date();
-  var t = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-  var date = new Date();
+  var t = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();  
   time.innerText = t;
 }
 
