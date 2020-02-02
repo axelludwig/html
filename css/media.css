@@ -3,7 +3,7 @@
 /* Custom, iPhone Retina */
 
 @media only screen and (min-width: 320px) {
-  #myVideo {
+  #background {
     position: fixed;
     /* position: static; */
     left: 0;
@@ -27,7 +27,7 @@
 /* Extra Small Devices, Phones */
 
 @media only screen and (min-width: 480px) {
-  #myVideo {
+  #background {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -49,7 +49,7 @@
 /* Small Devices, Tablets */
 
 @media only screen and (min-width: 768px) {
-  #myVideo {
+  #background {
     position: fixed;
     /* position: static; */
     left: 0;
@@ -72,7 +72,7 @@
 /* Medium Devices, Desktops */
 
 @media only screen and (min-width: 992px) {
-  #myVideo {
+  #background {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -94,7 +94,7 @@
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: 1200px) {
-  #myVideo {
+  #background {
     position: fixed;
     left: 0%;
     bottom: 0;

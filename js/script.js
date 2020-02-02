@@ -1,4 +1,4 @@
-var video = document.getElementById("myVideo");
+var video = document.getElementById("background");
 var music = document.getElementById("background_music");
 // music.volume = 0.3;
 var btn = document.getElementById("myBtn");
@@ -11,30 +11,59 @@ var count_play = 1;
 
 var date = document.getElementById("date");
 var time = document.getElementById("time");
+var weather_icon = getElementById("iconweather")
+
+//
 
 startup();
 
 function startup() {
   updateTime();
-  ;
+  updateDate();
+}
+
+video.onended = function () {
+  alert("salut")
+  video.load();
+  video.play();
+};
+
+
+//gestion du temps
+
+window.setInterval(function () {
+  updateTime();
+}, 1000);
+
+function updateTime() {
+  var today = new Date();
+  var h = fixZeros(today.getHours());
+  var m = fixZeros(today.getMinutes());
+  var s = fixZeros(today.getSeconds());
+  time.innerText = h + ":" + m + ":" + s;
 }
 
 function updateDate() {
-
+  var datef = new Date();
+  var res = datef.getUTCDay() + "/" + datef.getUTCMonth();
+  date.innerText = res;
 }
 
-window.setInterval(function(){
-  updateTime();
-}, 1000);
+function fixZeros(val) {
+  if (val < 10) return "0" + val;
+  else return val;
+}
+
+//boutons
 
 function pause() {
   count_play++;
   if (0 == count_play % 2) {
-    video.pause();
-    play_image.src = "source/pause.png"
-  } else {
     video.play();
     play_image.src = "source/play.png"
+  } else {
+    video.pause();
+    play_image.src = "source/pause.png"
   }
 }
 
@@ -50,11 +79,7 @@ function mute() {
   }
 }
 
-function updateTime() {
-  var today = new Date();
-  var t = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();  
-  time.innerText = t;
-}
+// meteo
 
 function getWeather() {
   fetch('https://json.geoiplookup.io/')
@@ -71,6 +96,7 @@ function getWeather() {
           return response.json();
         })
         .then((json) => {
+          
           console.log(json);
         });
     });
