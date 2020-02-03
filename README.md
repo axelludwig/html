@@ -1,5 +1,3 @@
-# html
-
-linkenparis.com
+# linkenparis.com
 
 Site de tests
