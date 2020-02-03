@@ -36,11 +36,16 @@
 
 .container_weather {
   position: fixed;
-  /* margin-top: 4%; */
+  margin-top: 3%;
   margin-left: 80%;
   background: rgba(255, 255, 255, 0.459);
   color: #f1f1f1;
-  width: 3%;
+  width: 15%;
+}
+
+#time {
+  margin-top: 5;
+  margin-left: 25%;  
 }
 
 #mute_image {
@@ -66,8 +71,4 @@
 #myBtn:hover {
   background: #ddd;
   color: black;
-}
-
-.main_title {
-  color: #000000a4
 }

@@ -11,7 +11,8 @@ var count_play = 1;
 
 var date = document.getElementById("date");
 var time = document.getElementById("time");
-var weather_icon = getElementById("iconweather")
+var weather_icon = document.getElementById("iconweather")
+var desc_weather = document.getElementById("descweather");
 
 //
 
@@ -20,6 +21,7 @@ startup();
 function startup() {
   updateTime();
   updateDate();
+  getWeather()
 }
 
 video.onended = function () {
@@ -45,8 +47,14 @@ function updateTime() {
 
 function updateDate() {
   var datef = new Date();
-  var res = datef.getUTCDay() + "/" + datef.getUTCMonth();
+  var res = fixZeros(datef.getUTCDay() + 1) + "/" + fixZeros(datef.getUTCMonth() + 1);
   date.innerText = res;
+}
+
+function updateIcon(path) {
+  path = path.substring(0, path.length - 1);
+  path += "n";
+  weather_icon.src = "http://openweathermap.org/img/wn/" + path + "@2x.png";
 }
 
 function fixZeros(val) {
@@ -96,7 +104,7 @@ function getWeather() {
           return response.json();
         })
         .then((json) => {
-          
+          updateIcon(json.weather[0].icon)
           console.log(json);
         });
     });
