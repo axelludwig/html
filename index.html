@@ -21,7 +21,8 @@
     <source src="source/ff7.mp3" type="audio/mpeg">
   </audio>
 
-  <video autoplay muted loop id="background" disablePictureInPicture controlsList="nodownload">
+  <video muted loop id="background" disablePictureInPicture controlsList="nodownload">
+    <!-- <video autoplay muted loop id="background" disablePictureInPicture controlsList="nodownload"> -->
     <source src="video/background.mp4" type="video/mp4">
   </video>
 </head>
@@ -43,12 +44,19 @@
   </div>
 
   <div class="container_weather">
-    <h2 id="time">test</h2>
-    <h3 id="date">test</h3>
-    <h2 id="descweather1">  </h2>
-    <h3 id="descweather2">  </h3>
-    <h2 id=temp>  </h2>
-    <img id="iconweather" src="" alt="">
+    <h2 id="full_date">placeholder</h3>
+      <div id=w1>
+        <h2 id="time">placeholder</h2>
+        <h2 id="date">placeholder</h3>
+          <h2 id=temp></h2>
+      </div>
+      <div id="w2">
+        <h2 id="descweather1"></h2>
+        <h3 id="descweather2"></h3>
+        <div id="icon">
+          <img id="iconweather" src="" alt="">
+        </div>
+      </div>
   </div>
 
   <script src="js/script.js"></script>
