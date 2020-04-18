@@ -34,6 +34,40 @@
   padding: 10px;
 }
 
+.container_list {
+  /* text-align: center; */
+  position: fixed;
+  top: 45%;
+  background: rgba(255, 255, 255, 0.459);
+  border:  solid rgba(255, 255, 255, 0.0)  2px;
+  /* color: #f1f1f1; */
+  /* margin: auto; */
+  width: 25%;
+  height: 50px;
+  /* padding: 10px; */
+  min-width: 290px;
+  left: 33%;
+  cursor: pointer;
+  
+}
+
+
+.container_list:hover {
+  /* text-align: center; */
+  /* background: rgba(165, 165, 165, 0.418); */
+  border: solid white 2px;
+}
+
+.list {
+  
+}
+
+.item{
+  margin: 0px;
+  margin-left: 35%;
+
+}
+
 .container_weather {
   display: inline-flexbox;
   position: fixed;
