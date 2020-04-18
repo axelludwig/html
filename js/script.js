@@ -203,3 +203,6 @@ function getWeather() {
     });
 }
 
+function redirectChat() {
+  window.location.href = 'http://linkenparis.com:4200';
+}
