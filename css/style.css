@@ -38,34 +38,35 @@
   /* text-align: center; */
   position: fixed;
   top: 45%;
-  background: rgba(255, 255, 255, 0.459);
-  border:  solid rgba(255, 255, 255, 0.0)  2px;
   /* color: #f1f1f1; */
   /* margin: auto; */
-  width: 25%;
+  width: 45%;
   height: 50px;
   /* padding: 10px; */
   min-width: 290px;
-  left: 33%;
-  cursor: pointer;
-  
+  left: 25%;
 }
 
-
-.container_list:hover {
-  /* text-align: center; */
-  /* background: rgba(165, 165, 165, 0.418); */
-  border: solid white 2px;
+.ulist {
+  list-style-type: none;
+  list-style: none;
 }
 
 .list {
-  
+  cursor: pointer;
 }
 
-.item{
-  margin: 0px;
-  margin-left: 35%;
+.item {
+  padding: 10px 0 10px 0;
+  background: rgba(255, 255, 255, 0.459);
+  border: solid rgba(255, 255, 255, 0.0) 2px;
+  margin: 10px 0 0px 0;
+  text-align: center;
+  /* margin-left: 35%; */
+}
 
+.item:hover {
+  border: solid white 2px;
 }
 
 .container_weather {

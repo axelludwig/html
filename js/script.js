@@ -203,6 +203,7 @@ function getWeather() {
     });
 }
 
-function redirectChat() {
-  window.location.href = 'http://linkenparis.com:4200';
+function redirectChat(index) {
+  if (0 == index) window.location.href = 'http://linkenparis.com:4200';
+  if (1 == index) window.location.href = 'http://linkenparis.com:3080';
 }
