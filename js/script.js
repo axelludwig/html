@@ -206,4 +206,5 @@ function getWeather() {
 function redirectChat(index) {
   if (0 == index) window.location.href = 'http://linkenparis.com:4200';
   if (1 == index) window.location.href = 'http://linkenparis.com:3080';
+  if (2 == index) window.location.href = 'http://linkenparis.com:5555';
 }
